@@ -1,0 +1,375 @@
+/********* NORMALIZE, BACKGROUND-COLOR, PRIMARYFONT *********/
+*,
+body {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "GFS Didot", serif;
+  max-height: 500vh;
+  color: #3b618b;
+}
+:target {
+  outline: none;
+}
+button {
+  all: unset;
+}
+a {
+  color: inherit;
+  /* text-decoration: none; */
+}
+img {
+  object-fit: cover;
+}
+/* all elements font-size */
+a,
+p,
+span,
+li,
+button {
+  font-size: clamp(16px, 3vw, 18px);
+}
+/* margin */
+p {
+  margin-bottom: 20px;
+}
+/* line height */
+p,
+li {
+  line-height: 1.6;
+}
+/* title */
+h1 {
+  text-align: center;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: clamp(23px, 3vw, 32px);
+  /* text-shadow: 0px 0px 0.1px #3b618b; */
+}
+/* H2 */
+h2 {
+  font-size: clamp(22px, 3vw, 28px);
+  margin-bottom: 25px;
+  line-height: 30px;
+  /* text-shadow: 0px 0px 0.1px #3b618b; */
+}
+h3 {
+  font-size: clamp(20px, 3vw, 24px);
+  margin-bottom: 15px;
+  /* text-shadow: 0px 0px 0.1px #3b618b; */
+}
+h4 {
+  font-size: clamp(18px, 3vw, 22px);
+  margin-bottom: 15px;
+}
+/* section */
+section {
+  padding: 0 5%;
+  line-height: 23px;
+  /* padding-top: 80px; */
+  padding-top: 8%; /* AUGMENTER qd l ecran rétrécit !!!! 23% iphone */
+  /* margin-top: -120px;  */
+  margin-bottom: 5px;
+}
+/* button */
+button {
+  background-color: #f6d3dd;
+  border: #3b618b 2px solid;
+  font-weight: bolder;
+  color: black;
+  text-shadow: 1px 1px 2px white;
+  /* text-shadow: 0px 0px 0.1px #3b618b; */
+  padding: 15px 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+/* hr */
+.hrSection {
+  border: 0;
+  height: 0.5px;
+  background: #3b618b;
+  width: 100%;
+  margin-top: 30px;
+}
+.demiHrSection {
+  border: 0;
+  height: 0.5px;
+  background: #3b618b;
+  width: 50%;
+  margin: 30px auto 0;
+}
+
+/********* NAV BAR *********/
+.logoAmandineClarr {
+  width: 100px;
+}
+.full_nav_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: white; /* Ajoutez une couleur de fond pour éviter que le contenu ne soit visible derrière */
+  z-index: 1000; /* Assurez-vous que la barre de navigation reste au-dessus du contenu */
+  /* border: 3px solid black; */
+}
+.nav_desktop {
+  width: 600px;
+  position: absolute;
+  right: 40px;
+}
+/* 🛑 */
+.nav_desktop ul {
+  display: flex;
+  justify-content: space-between;
+}
+.nav_desktop ul a {
+  text-decoration: none;
+}
+#infosPratiques ul {
+  margin-bottom: 20px;
+}
+
+/********* MENU MOBILE 🛑 *********/
+.nav_mobile {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  position: absolute;
+  top: 62px;
+  left: 10px;
+  width: 160px;
+  position: fixed;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.nav_mobile ul {
+  width: 100%;
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+.nav_mobile ul li {
+  padding: 10px 20px;
+}
+
+.nav_mobile ul li a {
+  text-decoration: none;
+  color: #3b618b;
+}
+
+/* Bouton de rendez-vous */
+.btn-rdv-mobile {
+  text-decoration: none;
+  border: 1px solid #3b618b;
+  padding: 10px 28px;
+}
+
+/* Styles pour la vue mobile */
+.menu-toggle {
+  color: #3b618b;
+  background-color: transparent;
+  /* border: transparent; */
+  border: 1px solid #3b618b;
+  padding: 10px 20px;
+}
+.menu-toggle , 
+.btn-rdv-mobile{
+  visibility: hidden;
+  font-size: 15px;
+}
+
+/********* HERO *********/
+.heroContent {
+  position: fixed; /* Fixe l'élément par rapport à la fenêtre */
+  bottom: 50px; /* Positionner le bouton à 20px du bas de la fenêtre */
+  right: 20px; /* Positionner le bouton à 20px du côté droit */
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+}
+.heroContent button {
+  padding: 25px 45px;
+}
+.btnRDV {
+  text-decoration: none;
+}
+.heroImg {
+  width: 100%;
+  max-height: 700px;
+  margin-top: 100px; /* Ajoutez une marge supérieure égale à la hauteur de la barre de navigation pour éviter que le contenu soit caché derrière */
+}
+
+/********* MAIN *********/
+main {
+  margin-top: 40px; /* Ajoutez une marge supérieure égale à la hauteur de la barre de navigation pour éviter que le contenu soit caché derrière */
+  width: 100%;
+  padding: 0 5%;
+}
+
+/********* SECTION THERAPIES *********/
+/* All */
+.sectionAnalytique,
+.sectionHarcelement,
+.sectionVisio {
+  margin-top: 35px;
+}
+.harcelementIMGContainer,
+.analytiqueIMG {
+  width: 450px;
+}
+.visioIMG,
+.quiIMG {
+  width: 350px;
+}
+.sectionHarcelement,
+.sectionAnalytique,
+.sectionVisio,
+#quiSuisJe {
+  display: flex;
+  align-items: center;
+}
+.harcelementTXTContainer,
+.analytiqueTXTContainer,
+.visioTXTContainer .quiTXTContainer {
+  width: 70%;
+  padding: 0 2%;
+}
+/***** harcelement *****/
+.harcelementIMG {
+  width: 100%;
+}
+/********* SECTION QUI SUIS JE *********/
+.quiIMG {
+  padding: 0 2%;
+}
+/********* SECTION INFOS *********/
+.infosParts{
+  margin-bottom: 20px;
+}
+.mobile {
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+.note{
+  font-style: italic;
+  margin-bottom: 0;
+}
+/********* SECTION FOOTER *********/
+.madeWithLove {
+  text-align: center;
+  padding: 80px 0 30px 0;
+  font-size: 16px;
+}
+/* .triangle {
+  font-size: 22px;
+} */
+.mxnblt,
+.Anne,
+.GPSLink {
+  /* font-size: 14px; */
+  text-decoration: underline;
+}
+
+/********* MEDIAQUERIES *********/
+
+/* IPAD */
+@media (max-width: 1024px) {
+  main {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 810px) {
+  /* 🛑 */
+  .nav_mobile.show {
+    display: flex;
+  }
+  /* effacer Prendre rendez-vous BTN */
+  .heroContent{
+    display: none;
+  }
+  /* effacer navbar ul*/
+  .nav_desktop{
+    display: none;
+}
+
+  /* Centrer la barre de navigation */
+  .full_nav_bar {
+    justify-content: center; 
+  }
+
+  /* Afficher le bouton MENU et le bouton RDV en vue mobile */
+  .menu-toggle {
+    visibility: visible;
+    position: absolute;
+    top: 20px;
+    left: 10px; /* Positionner le bouton MENU à gauche */
+  }
+
+  .btn-rdv-mobile {
+    visibility: visible;
+    position: absolute;
+    top: 20px;
+    right: 10px; /* Positionner le bouton RDV à droite */
+  }
+/* afficher MENU btn */
+/* afficher RDV btn */
+/* BTN  */
+
+
+
+/* 🛑 */
+  /* .nav_desktop {
+    width: 450px;
+  } */
+  main {
+    margin-top: 20px;
+  }
+  .sectionAnalytique,
+  .sectionVisio,
+  #quiSuisJe {
+    flex-direction: column;
+  }
+  .sectionHarcelement {
+    flex-direction: column-reverse;
+  }
+  .harcelementTXTContainer,
+  .analytiqueTXTContainer,
+  .visioTXTContainer,
+  .quiTXTContainer {
+    width: 100%;
+    padding: 2% 3%;
+  }
+  .harcelementIMGContainer,
+  .analytiqueIMG,
+  .visioIMG {
+    width: 350px;
+  }
+
+  /* IPHONE */
+  @media (max-width: 546px) {
+    h2 {
+      text-align: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .nav_desktop {
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .nav_desktop {
+      margin-right: 2px;
+    }
+  }
+}
