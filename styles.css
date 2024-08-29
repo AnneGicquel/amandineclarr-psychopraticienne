@@ -41,6 +41,8 @@ li {
 }
 /* title */
 h1 {
+  /* 🟡 */
+  color: orange;
   text-align: center;
   font-weight: lighter;
   font-style: italic;
