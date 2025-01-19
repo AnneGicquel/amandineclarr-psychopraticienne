@@ -51,11 +51,12 @@ h1 {
 h2 {
   font-size: clamp(22px, 3vw, 28px);
   margin-bottom: 25px;
-  line-height: 30px;
 }
 h3 {
   font-size: clamp(20px, 3vw, 24px);
   margin-bottom: 15px;
+  line-height: 30px;
+
 }
 h4 {
   font-size: clamp(18px, 3vw, 22px);
@@ -195,7 +196,9 @@ button {
 }
 .heroImg {
   width: 100%;
-  max-height: 700px;
+  /* max-height: 700px; */
+  max-height: 200px;
+
   margin-top: 100px; /* Marge supérieure égale à la hauteur de la barre de navigation pour éviter que le contenu soit caché derrière */
 }
 
@@ -238,6 +241,7 @@ main {
 .harcelementIMG {
   width: 100%;
 }
+
 /********* SECTION QUI SUIS JE *********/
 .quiIMG {
   padding: 0 2%;
